@@ -11,24 +11,36 @@
 </head>
 <body>
     <header>
-        <section class="header-sub">
-            <p>Gratis levering<img src="#" alt="Checkmark"></p>
-            <p>Gratis retur<img src="#" alt="Checkmark"></p>
-            <p>60 dagers åpent kjøp<img src="#" alt="Checkmark"></p>
+        <section id="header-sub">
+            <p>Gratis levering
+                <img src="gfx/check.svg" alt="Checkmark" class="check-icon">
+            </p>
+            <p>Gratis retur
+                <img src="gfx/check.svg" alt="Checkmark" class="check-icon">
+            </p>
+            <p>60 dagers åpent kjøp
+                <img src="gfx/check.svg" alt="Checkmark" class="check-icon">
+            </p>
             <nav>
                 <ul>
-                    <li><a href="#"><img src="#" alt="Mine favoritter"></a></li>
-                    <li><a href="#"><img src="#" alt="Min profil"></a></li>
-                    <li><a href="#"><img src="#" alt="Handlekurv"></a></li>
+                    <li>
+                        <a href="#"><span>favoritter</span><img src="gfx/heart.svg" alt="Mine favoritter" class="nav-icon-s"></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>Min profil</span><img src="gfx/profile.svg" alt="Min profil" class="nav-icon-s"></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>Handlekurv</span><img src="gfx/shopping_bag.svg" alt="Handlekurv" class="nav-icon-s"></a>
+                    </li>
                 </ul>
             </nav>
         </section>
-        <section class="header-main">
+        <section id="header-main">
             <span id="header-logo"><a href="index.html">Firstshoes</a></span>
-            <span class="nav-icon">
+            <span class="nav-icon-m">
                 <a href="#"><img src="gfx/search.svg" alt="Søk etter produkter"></a>
             </span>
-            <span class="nav-icon">
+            <span class="nav-icon-m">
                <a href="#"><img src="gfx/hamburger.svg" alt="Mobilmeny"></a>
             </span>
             <nav>
@@ -47,32 +59,35 @@
             </form>
         </section>
     </header>
+
     <main>
         <section id="hero">
-            <article>
-                <h2>Tittel</h2>
-                <a href="#">Se tilbud!</a>
-                <img src="#">
+            <article class="slide">
+                <h2>30% på alle vintersko</h2>
+                <a href="#" class="btn-l btn-solid-light">Se tilbud!</a>
+                <img src="img/the-alps-331.jpg" alt="" class="slide-img">
             </article>
-            <article>
-                <h2>Tittel</h2>
+            <article class="slide">
+                <h2>Høstens herrekolleksjon</h2>
                 <a href="#">Se tilbud!</a>
-                <img src="#">
+                <img src="img/autum_collection_man.jpg" class="slide-img">
             </article>
-            <article>
-                <h2>Tittel</h2>
+            <article class="slide">
+                <h2>Billige sko hele året</h2>
                 <a href="#">Se tilbud!</a>
-                <img src="#">
+                <img src="img/cheap_shoes_year.jpg" class="slide-img">
             </article>
-            <div>
-                <div></div>
-                <div></div>
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="slide-navi">
+                <div class="slide-navi-left" onclick="plusDivs(-1)"><img src="gfx/left-arrow.svg" alt="" class="slide-navi-arrow"></div>
+                <div class="slide-navi-right" onclick="plusDivs(1)"><img src="gfx/right-arrow.svg" alt="" class="slide-navi-arrow"></div>
+            </div>
+            <div class="slide-dots">
+                <span class="slide-dot dot-idle" onclick="currentDiv(1)"></span>
+                <span class="slide-dot dot-idle" onclick="currentDiv(2)"></span>
+                <span class="slide-dot dot-idle" onclick="currentDiv(3)"></span>
             </div>
         </section>
-        <section id="kategorier">
+       <!--<section id="kategorier">
             <h2>Hvem handler du for</h2>
             <article>
                 <h3>Dame</h3>
@@ -154,7 +169,7 @@
                 <h4>Produkt undertittel</h4>
                 <span>249kr</span>
             </article>
-        </section>
+        </section> -->
 
     </main>
 
@@ -201,5 +216,35 @@
             <p>© 2023, Firstshoes</p>
         </section>
     </footer> -->
+    <script>
+
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+    function currentDiv(n) {
+        showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("slide");
+        var dots = document.getElementsByClassName("slide-dot");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" dot-active", "");
+        }
+        x[slideIndex-1].style.display = "flex";  
+        dots[slideIndex-1].className += " dot-active";
+    }
+</script>
+
 </body>
 </html>
