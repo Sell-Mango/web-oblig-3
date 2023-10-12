@@ -3,62 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="https://kit.fontawesome.com/8aebfcef07.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Firstshoes</title>
 </head>
 <body>
     <header>
-        <section>
-            <span><a href="index.html">Firstshoes</a></span>
+        <section class="header-sub">
+            <p>Gratis levering<img src="#" alt="Checkmark"></p>
+            <p>Gratis retur<img src="#" alt="Checkmark"></p>
+            <p>60 dagers åpent kjøp<img src="#" alt="Checkmark"></p>
             <nav>
                 <ul>
-                    <li><a href="#">Herre</a></li>
-                    <li><a href="#">Dame</a></li>
-                    <li><a href="#">Merker</a></li>
-                    <li><a href="#">Tilbud</a></li>
+                    <li><a href="#"><img src="#" alt="Mine favoritter"></a></li>
+                    <li><a href="#"><img src="#" alt="Min profil"></a></li>
+                    <li><a href="#"><img src="#" alt="Handlekurv"></a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="header-main">
+            <span id="header-logo"><a href="index.html">Firstshoes</a></span>
+            <span class="nav-icon">
+                <a href="#"><img src="gfx/search.svg" alt="Søk etter produkter"></a>
+            </span>
+            <span class="nav-icon">
+               <a href="#"><img src="gfx/hamburger.svg" alt="Mobilmeny"></a>
+            </span>
+            <nav>
+                <ul>
+                    <li><a href="#" class="">Herre</a></li>
+                    <li><a href="#" class="">Dame</a></li>
+                    <li><a href="#" class="">Merker</a></li>
+                    <li><a href="#" class="">Tilbud</a></li>
                     <li><a href="#">Vinter</a></li>
                 </ul>
             </nav>
-            <nav>
-                <ul>
-                    <li><a href="#"></a>Logg inn</li>
-                    <li><a href="handlekurv.html"></a>Handlekurv</li>
-                </ul>
-            </nav>
             <form>
-                <label for=""></label>
-                <input type="text">
+                <label for="search"></label>
+                <input type="text" id="search">
                 <input type="submit" value="submit">
             </form>
-        </section>
-        <section>
-            <form>
-                <label for=""></label>
-                <input type="text">
-                <input type="submit" value="submit">
-            </form>
-            <span></span>
-            <p>Gratis levering<span></span></p>
-            <p>Gratis retur<span></span></p>
-            <p>60 dagers åpent kjøp<span></span></p>
-            <nav>
-                <ul>
-                    <li><a href="#"></a>Logg inn</li>
-                    <li><a href="handlekurv.html"></a>Handlekurv</li>
-                </ul>
-            </nav>
         </section>
     </header>
     <main>
-        <section id="hero"></section>
-        <section id="brands"></section>
-        <section id="produkter"></section>
-        <section id="banner"></section>
-        <section id="ads"></section>
+        <section id="hero">
+            <article>
+                <h2>Tittel</h2>
+                <a href="#">Se tilbud!</a>
+                <img src="#">
+            </article>
+            <article>
+                <h2>Tittel</h2>
+                <a href="#">Se tilbud!</a>
+                <img src="#">
+            </article>
+            <article>
+                <h2>Tittel</h2>
+                <a href="#">Se tilbud!</a>
+                <img src="#">
+            </article>
+            <div>
+                <div></div>
+                <div></div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+        <section id="kategorier">
+            <h2>Hvem handler du for</h2>
+            <article>
+                <h3>Dame</h3>
+                <img src="#">
+            </article>
+            <article>
+                <h3>Herre</h3>
+                <img src="#">
+            </article>
+            <article>
+                <h3>Barn</h3>
+                <img src="#">
+            </article>
+        </section>
+        <section id="selling_points">
+            <article>
+                <img src="#">
+                <h3>Gratis levering</h3>
+            </article>
+            <article>
+                <img src="#">
+                <h3>60 dagers retur</h3>
+            </article>
+            <article>
+                <img src="#">
+                <h3>bærekraftig valg</h3>
+            </article>
+        </section>
+        <section id="produkter">
+            <article>
+                <h2>Sko til gode priser</h2>
+                <p>Alltid gode priser</p>
+            </article>
+            <article>
+                <img src="#" alt="">
+                <h3>Produkt tittel</h3>
+                <h4>Produkt undertittel</h4>
+                <span>249kr</span>
+            </article>
+            <article>
+                <img src="#" alt="">
+                <h3>Produkt tittel</h3>
+                <h4>Produkt undertittel</h4>
+                <span>249kr</span>
+            </article>
+            <article>
+                <img src="#" alt="">
+                <h3>Produkt tittel</h3>
+                <h4>Produkt undertittel</h4>
+                <span>249kr</span>
+            </article>
+            <article>
+                <img src="#" alt="">
+                <h3>Produkt tittel</h3>
+                <h4>Produkt undertittel</h4>
+                <span>249kr</span>
+            </article>
+            <article>
+                <img src="#" alt="">
+                <h3>Produkt tittel</h3>
+                <h4>Produkt undertittel</h4>
+                <span>249kr</span>
+            </article>
+            <article>
+                <img src="#" alt="">
+                <h3>Produkt tittel</h3>
+                <h4>Produkt undertittel</h4>
+                <span>249kr</span>
+            </article>
+            <article>
+                <img src="#" alt="">
+                <h3>Produkt tittel</h3>
+                <h4>Produkt undertittel</h4>
+                <span>249kr</span>
+            </article>
+            <article>
+                <img src="#" alt="">
+                <h3>Produkt tittel</h3>
+                <h4>Produkt undertittel</h4>
+                <span>249kr</span>
+            </article>
+        </section>
+
     </main>
 
-    <footer>
+   <!-- <footer>
         <section>
             <article>
                 <span><a href="index.html">Firstshoes</a></span>
@@ -100,6 +200,6 @@
         <section>
             <p>© 2023, Firstshoes</p>
         </section>
-    </footer>
+    </footer> -->
 </body>
 </html>
