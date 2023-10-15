@@ -60,9 +60,25 @@ body {
 
 /* ############# Icons ############# */
 .icon-xs { width: 1.6rem; }
-.icon-s { width: 2.2rem; }
+.icon-s { width: 2.2rem; height: 2.2rem; }
 .icon-m { width: 3.4rem; }
 .icon-l { width: 4.5rem; }
+
+.i-check { background: url('../gfx/check.svg'); background-repeat: no-repeat; }
+.i-heart { background: url('../gfx/heart.svg'); background-repeat: no-repeat; }
+.i-person { background: url('../gfx/profile.svg'); background-repeat: no-repeat;}
+.i-bag { background: url('../gfx/shopping_bag.svg'); background-repeat: no-repeat;}
+.i-left-arrow { background: url('../gfx/left-arrow.svg'); background-repeat: no-repeat;}
+.i-right-arrot { background: url('../gfx/right-arrow.svg'); background-repeat: no-repeat;}
+.i-truck { background: url('../gfx/truck.svg'); background-repeat: no-repeat;}
+.i-rewind { background: url('../gfx/rewind.svg'); background-repeat: no-repeat;}
+.i-plant { background: url('../gfx/plant.svg'); background-repeat: no-repeat;}
+.i-right-arrow-2 { background: url('../gfx/arrow-right-2.svg'); background-repeat: no-repeat;}
+.i-search { background: url('../gfx/search.svg'); background-repeat: no-repeat;}
+.i-hamburger { background: url('../gfx/hamburger.svg'); background-repeat: no-repeat;}
+
+
+.icon-white { filter: invert(100%) }
 
 .icon-round-m {
     padding: 1.2rem 1.5rem;
@@ -71,7 +87,6 @@ body {
 }
 
 /* ############# Heading/text ############# */
-
 .heading-1 {
     font-size: var(--heading-l);
     font-weight: 700;
@@ -92,17 +107,21 @@ p { margin: 0; }
 
 .text-m { font-size: var(--text-m); }
 
+/* Hiding elements on mobile */
 #header-main nav, #header-main form, #header-sub span:not(:first-child), #header-sub ul span { 
     display: none; }
 
+/* Init flezbox */
 #header-main, #header-sub, #header-sub span, #header-sub nav, #header-sub ul, #header-sub ul a, #kategorier, .category, #selling-points, #selling-points span, .merker-header, .merker-body, .merker-body a, #produkter article a, #bli-medlem article, #ads, #ads article, #footer-main, #footer-main article:first-child, footer form, footer ul { 
     display: flex; }
 
+/* Document horizontal and vertical padding */
 #kategorier, #merker, #produkter, #ads, #footer-main, #selling-points, #merker, #bli-medlem article, #footer-main {
     padding: var(--section-space) var(--document-space);
 }
 
-#header-sub nav, #header-main, #selling-points span, #merker, #produkter, #ads, #footer-main, #footer-sub p {
+/* Document max width */
+#header-sub, #header-main, #merker, #produkter, #ads, #footer-main, #footer-sub p {
     max-width: var(--document-width);
     margin: auto;
 }
@@ -118,6 +137,8 @@ p { margin: 0; }
 }
 
 /* ############# Header styles  ############# */
+header { background: linear-gradient(180deg, var(--shade-92) 0%, var(--shade-92) 41%, var(--white) 42%, var(--white) 100%); }
+
 #header-main, #header-sub {
     flex-direction: row;
     justify-content: space-between;
@@ -126,7 +147,6 @@ p { margin: 0; }
 }
 
 #header-sub {
-    background-color: var(--shade-92);
     padding: 0.2rem var(--document-space);
     gap: var(--space-m);
 }
@@ -279,6 +299,7 @@ p { margin: 0; }
     font-weight: 600;
 }
 
+/* ######### Selling points ######### */
 #selling-points {
     flex-direction: column;
     gap: var(--space-l);
@@ -288,6 +309,7 @@ p { margin: 0; }
 #selling-points span {
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
     gap: var(--space-m);
     font-size: var(--heading-s);
     font-weight: 400;
