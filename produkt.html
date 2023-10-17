@@ -54,47 +54,50 @@
         </section>
     </header>
     <main id="produkt">
-        <ul class="breadcrumbs">
-            <li><a href="index.html">Hjem</a></li>
-            <li><a href="produkter.html">Produkter</a></li>
-            <li>Produkt</li>
-        </ul>
-        <section id="prod_slider">
-            <span class="slide">
-                <img src="img/the-alps-331.jpg" alt="" class="slide-img bg-image">
-            </span>
-            <span class="slide">
-                <img src="img/autum_collection_man.jpg" alt="" class="slide-img bg-image">
-            </span>
-            <span class="slide">
-                <img src="img/cheap_shoes_year.jpg" alt="" class="slide-img bg-image">
-            </span>
-            <div class="slide-arrows">
-                <span class="slide-arrow-left icon-xs" onclick="plusDivs(-1)"><img src="gfx/left-arrow.svg" alt="" class="slide-navi-arrow"></span>
-                <span class="slide-arrow-right icon-xs" onclick="plusDivs(1)"><img src="gfx/right-arrow.svg" alt="" class="slide-navi-arrow"></span>
+        <section>
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="produkter.html">Produkter</a></li>
+                <li>Produkt</li>
+            </ul>
+            <div id="prod_slider">
+                <span class="slide">
+                    <img src="img/the-alps-331.jpg" alt="" class="slide-img bg-image">
+                </span>
+                <span class="slide">
+                    <img src="img/autum_collection_man.jpg" alt="" class="slide-img bg-image">
+                </span>
+                <span class="slide">
+                    <img src="img/cheap_shoes_year.jpg" alt="" class="slide-img bg-image">
+                </span>
+                <div class="slide-arrows">
+                    <span class="slide-arrow-left icon-xs" onclick="plusDivs(-1)"><img src="gfx/left-arrow.svg" alt="" class="slide-navi-arrow"></span>
+                    <span class="slide-arrow-right icon-xs" onclick="plusDivs(1)"><img src="gfx/right-arrow.svg" alt="" class="slide-navi-arrow"></span>
+                </div>
+                <div class="slide-dots">
+                    <span class="dot" onclick="currentDiv(1)"></span>
+                    <span class="dot" onclick="currentDiv(2)"></span>
+                    <span class="dot" onclick="currentDiv(3)"></span>
+                </div>
             </div>
-            <div class="slide-dots">
-                <span class="dot" onclick="currentDiv(1)"></span>
-                <span class="dot" onclick="currentDiv(2)"></span>
-                <span class="dot" onclick="currentDiv(3)"></span>
-            </div>
+            <img src="img/the-alps-331.jpg" alt="" class="prod_slide_thumb">
+            <img src="img/autum_collection_man.jpg" alt="" class="prod_slide_thumb">
+            <img src="img/cheap_shoes_year.jpg" alt="" class="prod_slide_thumb">
         </section>
         <section id="prod_info">
-            <article>
-                <p>Ecco</p>
+            <article id="prod_info_header">
+                <h2 class="info_brand">Ecco</h2>
                 <h1>Mens soft 7 Sneaker Marine</h1>
-                <h2>Produktbeskrivelse</h2>
                 <p>Jorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.</p>
             </article>
-            <article>
-                <h2>Velg farge</h2>
-                <span>Blå</span>
-                <span>rød</span>
-                <span>Grønn</span>
+            <article id="prod_info_color">
+                <h3>Velg farge</h3>
+                <span></span>
+                <span></span>
+                <span></span>
             </article>
-            <article>
-                <h2>Velg størrelse</h2>
-                <button>Velg størrelse</button>
+            <article id="prod_info_size">
+                <button>Velg størrelse<img src="gfx/right-arrow.svg" alt="" class="icon-xs"></button>
                 <span>39</span>
                 <span>40</span>
                 <span>41</span>
@@ -104,7 +107,7 @@
                 <span>45</span>
                 <span>46</span>
             </article>
-            <article>
+            <article id="prod_info_action">
                 <h2>399,-</h2>
                 <a href="#">Legg i handlekurv<img src="#" alt=""></a>
                 <a href="#">Legg til favoritt<img src="#" alt=""></a>
