@@ -12,25 +12,19 @@
 <body>
     <header>
         <section id="header-sub">
-            <p>Gratis levering
-                <img src="gfx/check.svg" alt="Checkmark" class="icon-xs">
-            </p>
-            <p>Gratis retur
-                <img src="gfx/check.svg" alt="Checkmark" class="icon-xs">
-            </p>
-            <p>60 dagers åpent kjøp
-                <img src="gfx/check.svg" alt="Checkmark" class="icon-xs">
-            </p>
+            <span>Gratis levering<img src="gfx/check.svg" alt="Checkmark" class="icon-xs"></span>
+            <span>Gratis retur<img src="gfx/check.svg" alt="Checkmark" class="icon-xs"></span>
+            <span>60 dagers åpent kjøp<img src="gfx/check.svg" alt="Checkmark" class="icon-xs"></span>
             <nav>
                 <ul>
                     <li>
-                        <a href="#"><span>favoritter</span><img src="gfx/heart.svg" alt="Mine favoritter" class="icon-s"></a>
+                        <a href="#" class="text-black"><span>favoritter</span><img src="gfx/heart.svg" alt="" class="icon-s"></a>
                     </li>
                     <li>
-                        <a href="#"><span>Min profil</span><img src="gfx/profile.svg" alt="Min profil" class="icon-s"></a>
+                        <a href="#" class="text-black"><span class="text-black">Min profil</span><img src="gfx/profile.svg" alt="" class="icon-s"></a>
                     </li>
                     <li>
-                        <a href="handlekurv.html"><span>Handlekurv</span><img src="gfx/shopping_bag.svg" alt="Handlekurv" class="icon-s"></a>
+                        <a href="handlekurv.html" class="text-black"><span>Handlekurv</span><img src="gfx/shopping_bag.svg" alt="" class="icon-s"></a>
                     </li>
                 </ul>
             </nav>
@@ -38,10 +32,10 @@
         <section id="header-main">
             <span class="logo"><a href="index.html">Firstshoes</a></span>
             <span class="icon-m">
-                <a href="#"><img src="gfx/search.svg" alt="Søk etter produkter"></a>
+                <a href="#"><img src="gfx/search.svg" alt="" class="icon-m"></a>
             </span>
             <span class="icon-m">
-               <a href="#"><img src="gfx/hamburger.svg" alt="Mobilmeny"></a>
+               <a href="#"><img src="gfx/hamburger.svg" alt="" class="icon-m"></a>
             </span>
             <nav>
                 <ul>
@@ -55,12 +49,145 @@
             <form>
                 <label for="search"></label>
                 <input type="text" id="search">
-                <input type="submit" value="submit">
+                <button type="submit"><img src="gfx/search.svg" alt="" class="icon-white">Søk</button>
             </form>
         </section>
     </header>
-    <main>
-
+    <main id="produkt">
+        <ul class="breadcrumbs">
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="produkter.html">Produkter</a></li>
+            <li>Produkt</li>
+        </ul>
+        <section id="prod_slider">
+            <span class="slide">
+                <img src="img/the-alps-331.jpg" alt="" class="slide-img bg-image">
+            </span>
+            <span class="slide">
+                <img src="img/autum_collection_man.jpg" alt="" class="slide-img bg-image">
+            </span>
+            <span class="slide">
+                <img src="img/cheap_shoes_year.jpg" alt="" class="slide-img bg-image">
+            </span>
+            <div class="slide-arrows">
+                <span class="slide-arrow-left icon-xs" onclick="plusDivs(-1)"><img src="gfx/left-arrow.svg" alt="" class="slide-navi-arrow"></span>
+                <span class="slide-arrow-right icon-xs" onclick="plusDivs(1)"><img src="gfx/right-arrow.svg" alt="" class="slide-navi-arrow"></span>
+            </div>
+            <div class="slide-dots">
+                <span class="dot" onclick="currentDiv(1)"></span>
+                <span class="dot" onclick="currentDiv(2)"></span>
+                <span class="dot" onclick="currentDiv(3)"></span>
+            </div>
+        </section>
+        <section id="prod_info">
+            <article>
+                <p>Ecco</p>
+                <h1>Mens soft 7 Sneaker Marine</h1>
+                <h2>Produktbeskrivelse</h2>
+                <p>Jorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.</p>
+            </article>
+            <article>
+                <h2>Velg farge</h2>
+                <span>Blå</span>
+                <span>rød</span>
+                <span>Grønn</span>
+            </article>
+            <article>
+                <h2>Velg størrelse</h2>
+                <button>Velg størrelse</button>
+                <span>39</span>
+                <span>40</span>
+                <span>41</span>
+                <span>42</span>
+                <span>43</span>
+                <span>44</span>
+                <span>45</span>
+                <span>46</span>
+            </article>
+            <article>
+                <h2>399,-</h2>
+                <a href="#">Legg i handlekurv<img src="#" alt=""></a>
+                <a href="#">Legg til favoritt<img src="#" alt=""></a>
+            </article>
+        </section>
+        <section id="prod_faq">
+          <!--  <h2>Produktinformasjon</h2> -->
+        </section>
+        <section id="prod_flere">
+          <!--  <h2 class="heading-2">Flere produkter</h2>
+            <article>
+                <a href="#">
+                    <h3>Produkt tittel</h3>
+                    <h4>Produkt undertittel</h4>
+                    <span>249kr</span>
+                    <span><img src="gfx/heart.svg" alt=""></span>
+                    <img src="img/arunas-naujokas-yzmtlz9SJ4A-unsplash.jpg" alt="">
+                </a>
+            </article>
+            <article>
+                <a href="#">
+                    <h3>Produkt tittel</h3>
+                    <h4>Produkt undertittel</h4>
+                    <span>249kr</span>
+                    <span><img src="gfx/heart.svg" alt=""></span>
+                    <img src="img/arunas-naujokas-yzmtlz9SJ4A-unsplash.jpg" alt="">
+                </a>
+            </article>
+            <article>
+                <a href="#">
+                    <h3>Produkt tittel</h3>
+                    <h4>Produkt undertittel</h4>
+                    <span>249kr</span>
+                    <span><img src="gfx/heart.svg" alt=""></span>
+                    <img src="img/arunas-naujokas-yzmtlz9SJ4A-unsplash.jpg" alt="">
+                </a>
+            </article>
+            <article>
+                <a href="#">
+                    <h3>Produkt tittel</h3>
+                    <h4>Produkt undertittel</h4>
+                    <span>249kr</span>
+                    <span><img src="gfx/heart.svg" alt=""></span>
+                    <img src="img/arunas-naujokas-yzmtlz9SJ4A-unsplash.jpg" alt="">
+                </a>
+            </article>
+            <article>
+                <a href="#">
+                    <h3>Produkt tittel</h3>
+                    <h4>Produkt undertittel</h4>
+                    <span>249kr</span>
+                    <span><img src="gfx/heart.svg" alt=""></span>
+                    <img src="img/arunas-naujokas-yzmtlz9SJ4A-unsplash.jpg" alt="">
+                </a>
+            </article>
+            <article>
+                <a href="#">
+                    <h3>Produkt tittel</h3>
+                    <h4>Produkt undertittel</h4>
+                    <span>249kr</span>
+                    <span><img src="gfx/heart.svg" alt=""></span>
+                    <img src="img/arunas-naujokas-yzmtlz9SJ4A-unsplash.jpg" alt="">
+                </a>
+            </article>
+            <article>
+                <a href="#">
+                    <h3>Produkt tittel</h3>
+                    <h4>Produkt undertittel</h4>
+                    <span>249kr</span>
+                    <span><img src="gfx/heart.svg" alt=""></span>
+                    <img src="img/arunas-naujokas-yzmtlz9SJ4A-unsplash.jpg" alt="">
+                </a>
+            </article>
+            <article>
+                <a href="#">
+                    <h3>Produkt tittel</h3>
+                    <h4>Produkt undertittel</h4>
+                    <span>249kr</span>
+                    <span><img src="gfx/heart.svg" alt=""></span>
+                    <img src="img/arunas-naujokas-yzmtlz9SJ4A-unsplash.jpg" alt="">
+                </a>
+            </article> -->
+        </section>
     </main>
     <footer>
         <section id="footer-main">
@@ -68,12 +195,13 @@
                 <span class="logo"><a href="index.html">Firstshoes</a></span>
                 <p>Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.</p>
                 <form>
+                    <h3>Meld deg på nyhetsbrev</h3>
                     <input type="text" placeholder="E-post">
-                    <input type="submit" value="submit">
+                    <input type="submit" value="Bli medlem nå!">
                 </form>
             </article>
             <article>
-                <h4>Kategorier</h4>
+                <h3>Kategorier</h3>
                 <nav>
                     <ul>
                         <li><a href="#"></a>Barn</li>
@@ -85,7 +213,7 @@
                 </nav>
             </article>
             <article>
-                <h4>Kundeservice</h4>
+                <h3>Kundeservice</h3>
                 <nav>
                     <ul>
                         <li><a href="#"></a>Betaling</li>
@@ -96,7 +224,7 @@
                 </nav>
             </article>           
             <article>
-                <h4>Kontakt</h4>
+                <h3>Kontakt</h3>
                 <address>
                     <p>Firstshoes AS</p>
                     <p>Fjellveien 13</p>
