@@ -701,6 +701,86 @@ header {
     span:not(:last-child) { font-size: $text-m; }
  }
 
+ //########## Handlekurv ###############
+
+ #handlekurv {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $space-m;
+    padding: $space-m $document-space;
+    max-width: $document-width;
+    margin: auto;
+
+    > :nth-child(1) {
+        display: flex;
+        justify-content: center;
+    }
+
+    h1 { font-size: $heading-m; }
+
+    > :nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        gap: $space-s;
+    }
+ }
+
+ .cart_item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: $shade-92;
+
+    > img {
+        width: 25%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    article { padding: $space-m; }
+
+    > :nth-child(2) { 
+        width: 100%;
+    }
+
+    > :nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    h2 {
+        font-size: $text-l;
+        font-weight: 500;
+        margin-bottom: $space-xs;
+    }
+
+    p { 
+        font-size: $text-s;
+        font-weight: 300;
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: $space-xs;
+
+        input { width: 2rem; }
+    }
+
+    span {
+        font-size: $text-m;
+        font-weight: 500;
+    }
+ }
+
+ #pris_oversikt {
+    
+ }
+
 //######### Footer #########
 footer {     
     background-color: $shade-97;
@@ -851,6 +931,15 @@ $breakpoint-small-laptop: 991px;
     #prod_info_action {
         background-color:inherit;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    #handlekurv {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space-l;
+
+        > :nth-child(1) {
+            grid-column: 1 / -1;
+        }
     }
 
     #footer-main { 
