@@ -149,10 +149,26 @@ p {
   width: 100%;
   height: 100%;
   position: absolute;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+.skip-link {
+  position: absolute;
+  top: auto;
+  left: -100rem;
+  background-color: red;
+  color: #ffffff;
+  padding: 1rem;
+  font-size: clamp(1.6rem, 1.6rem + (1vw - 0.76rem) * 0.3846, 1.8rem);
+}
+.skip-link:focus {
+  left: auto;
+  top: auto;
 }
 
 header {
@@ -204,6 +220,10 @@ header #header-main ul {
 header #header-main li a {
   text-decoration: none;
   color: #000000;
+  transition: all 0.2s ease-out;
+}
+header #header-main li a:hover {
+  color: #6D6D6D;
 }
 header #header-main [type=text] {
   padding-left: 1rem;
@@ -300,18 +320,24 @@ header #header-main span:nth-child(3) {
 #kategorier :first-child {
   grid-column: 1/-1;
 }
-#kategorier .category {
+
+.category {
   position: relative;
-  height: 25rem;
+  height: 20rem;
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
   background-color: rgba(0, 0, 0, 0.15);
 }
-#kategorier .category h3 {
+.category h3 {
   font-size: clamp(3rem, 3rem + (1vw - 0.76rem) * 1.9231, 4rem);
   line-height: 0;
   font-weight: 600;
+}
+.category:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 #selling-points {
@@ -332,7 +358,8 @@ header #header-main span:nth-child(3) {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  column-gap: 1rem;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
   margin-bottom: 1rem;
 }
 .merker-header p {
@@ -457,6 +484,12 @@ header #header-main span:nth-child(3) {
   font-size: clamp(1.8rem, 1.8rem + (1vw - 0.76rem) * 0.3846, 2rem);
 }
 
+#produkt {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+}
+
 .breadcrumbs {
   list-style-type: none;
   padding-left: 2rem;
@@ -473,27 +506,6 @@ header #header-main span:nth-child(3) {
 .breadcrumbs li a {
   text-decoration: none;
   color: #000000;
-}
-
-#produkter-header {
-  position: relative;
-}
-#produkter-header :not(:last-child) {
-  max-width: 128rem;
-  margin: auto;
-}
-
-#produkter {
-  max-width: 128rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: auto;
-}
-
-#produkt {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 3rem;
 }
 
 #prod_start {
@@ -554,7 +566,8 @@ header #header-main span:nth-child(3) {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  column-gap: clamp(1.2rem, 1.2rem + (1vw - 0.76rem) * 1.1538, 1.8rem);
+  -moz-column-gap: clamp(1.2rem, 1.2rem + (1vw - 0.76rem) * 1.1538, 1.8rem);
+       column-gap: clamp(1.2rem, 1.2rem + (1vw - 0.76rem) * 1.1538, 1.8rem);
 }
 #prod_info_color h2 {
   width: 100%;
@@ -577,7 +590,8 @@ header #header-main span:nth-child(3) {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  column-gap: clamp(1.2rem, 1.2rem + (1vw - 0.76rem) * 1.1538, 1.8rem);
+  -moz-column-gap: clamp(1.2rem, 1.2rem + (1vw - 0.76rem) * 1.1538, 1.8rem);
+       column-gap: clamp(1.2rem, 1.2rem + (1vw - 0.76rem) * 1.1538, 1.8rem);
 }
 #prod_info_size h3 {
   width: 100%;
@@ -699,15 +713,16 @@ header #header-main span:nth-child(3) {
   flex-wrap: nowrap;
   background-color: #EBEBEB;
 }
+.cart_item article {
+  padding: clamp(2rem, 2rem + (1vw - 0.76rem) * 1.7308, 2.9rem);
+}
 .cart_item > :nth-child(1) {
   flex: 1 1 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  object-fit: cover;
-}
-.cart_item article {
-  padding: clamp(2rem, 2rem + (1vw - 0.76rem) * 1.7308, 2.9rem);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .cart_item > :nth-child(2) {
   flex: 2 1 0;
@@ -743,10 +758,19 @@ header #header-main span:nth-child(3) {
   font-weight: 500;
 }
 
+#handlekurv_pris > :nth-child(2) {
+  margin-bottom: clamp(0.8rem, 0.8rem + (1vw - 0.76rem) * 1.1538, 1.4rem);
+}
+#handlekurv_pris a {
+  padding: 1.8rem 0;
+  width: 100%;
+}
+
 #pris_oversikt {
   display: flex;
   flex-direction: column;
   gap: clamp(1.2rem, 1.2rem + (1vw - 0.76rem) * 1.1538, 1.8rem);
+  margin-bottom: clamp(3rem, 3rem + (1vw - 0.76rem) * 2.3077, 4.2rem);
 }
 #pris_oversikt > :not(:nth-child(2)) {
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
@@ -761,14 +785,6 @@ header #header-main span:nth-child(3) {
 #pris_oversikt .totalt {
   font-size: clamp(1.8rem, 1.8rem + (1vw - 0.76rem) * 0.3846, 2rem);
   font-weight: 500;
-}
-
-#handlekurv_pris > :nth-child(1) {
-  margin-bottom: 5rem;
-}
-#handlekurv_pris a {
-  padding: 1.8rem 0;
-  width: 100%;
 }
 
 footer {
@@ -869,6 +885,10 @@ footer form [type=submit] {
   header #header-main .logo {
     flex-grow: 0;
   }
+  .slide {
+    height: 60vh;
+    max-height: 60rem;
+  }
   .category {
     height: 30rem;
   }
@@ -918,11 +938,15 @@ footer form [type=submit] {
     grid-template-columns: repeat(2, 1fr);
   }
   #handlekurv {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: clamp(3rem, 3rem + (1vw - 0.76rem) * 2.3077, 4.2rem);
   }
   #handlekurv > :nth-child(1) {
     grid-column: 1/-1;
+  }
+  #handlekurv > :nth-child(2) {
+    grid-column: span 2;
+    padding-right: clamp(3rem, 3rem + (1vw - 0.76rem) * 2.3077, 4.2rem);
   }
   #footer-main {
     grid-template-columns: 3fr 1fr 1fr 1fr;

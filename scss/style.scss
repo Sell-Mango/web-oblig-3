@@ -148,6 +148,7 @@ p { margin: 0; }
     height: 100%;
     position: absolute;
     object-fit: cover;
+    overflow: hidden;
     top: 0;
     left: 0;
     z-index: -1;
@@ -155,6 +156,21 @@ p { margin: 0; }
 
 
 //############# Header styles  #############
+.skip-link {
+    position: absolute;
+    top: auto;
+    left: -100rem;
+    background-color: red;
+    color: $white;
+    padding: 1rem;
+    font-size: $text-m;
+
+    &:focus {
+        left: auto;
+        top: auto;
+    }
+
+}
 header { 
     background: linear-gradient(180deg, $shade-92 0%, $shade-92 41%, $white 42%, $white 100%);
 
@@ -211,6 +227,9 @@ header {
         li a {
             text-decoration: none;
             color: $black;
+            transition: all .2s ease-out;
+
+            &:hover { color: $shade-43; }
         }
 
         [type="text"] { padding-left: 1rem; }
@@ -307,23 +326,26 @@ header {
     margin: auto;
 
     :first-child { grid-column: 1 / -1; }
-
-    .category {
-        position: relative;
-        height: 25rem;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        background-color: rgba(0,0,0,.15);
-
-        h3 {
-            font-size: $heading-m;
-            line-height: 0;
-            font-weight: 600;
-        }
-    }
 }
 
+.category {
+    position: relative;
+    height: 20rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    background-color: rgba(0,0,0,.15);
+
+    h3 {
+        font-size: $heading-m;
+        line-height: 0;
+        font-weight: 600;
+    }
+
+    &:hover { background-color: rgba(0,0,0,.4); }
+}
 
 //######### Selling points #########
 #selling-points {
@@ -386,7 +408,7 @@ header {
         font-size: $text-m;
 
         img { margin-left: 1rem; }
-    }    
+    }
 }
 
 //######### Produkter #########
@@ -465,7 +487,6 @@ header {
 }
 
 #ads { 
-    
     gap: $space-m;
 
     article { 
@@ -476,7 +497,13 @@ header {
     }
 }
 
-//######### Produkter side ######### 
+//######### Enkeltprodukt side #########
+#produkt {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+}
+
 .breadcrumbs {
     list-style-type: none;
     padding-left: $document-space;
@@ -496,30 +523,6 @@ header {
             color: $black;
         }
     }
-}
-
-#produkter-header {
-    position: relative;
-
-    :not(:last-child) {
-        max-width: 128rem;
-        margin: auto;
-    }
-}
- 
-#produkter {
-    max-width: $document-width;
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: auto;
-}
-
-
-//######### Enkeltprodukt side #########
-#produkt {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 3rem;
 }
 
 #prod_start {
@@ -731,6 +734,8 @@ header {
     flex-wrap: nowrap;
     background-color: $shade-92;
 
+    article { padding: $space-m; }
+
     > :nth-child(1) {
         flex: 1 1 0;
         width: 100%;
@@ -738,8 +743,6 @@ header {
         overflow: hidden;
         object-fit: cover;
     }
-
-    article { padding: $space-m; }
 
     > :nth-child(2) { flex: 2 1 0; }
 
@@ -778,14 +781,25 @@ header {
     }
  }
 
+ #handlekurv_pris {
+
+    > :nth-child(2) {
+        margin-bottom: $space-xs;
+    }
+
+    a {
+        padding: 1.8rem 0;
+        width: 100%;
+    }
+}
+
 #pris_oversikt {
     display: flex;
     flex-direction: column;
     gap: $space-s;
+    margin-bottom: $space-l;
 
-    > :not(:nth-child(2)) {
-        border-bottom: .1rem solid rgba(0,0,0,.2);
-    }
+    > :not(:nth-child(2)) { border-bottom: .1rem solid rgba(0,0,0,.2); }
 
     p {
         display: flex;
@@ -800,18 +814,6 @@ header {
         font-weight: 500;
     }
 
-}
-
-#handlekurv_pris {
-
-    > :nth-child(1) {
-        margin-bottom: 5rem;
-    }
-
-    a {
-        padding: 1.8rem 0;
-        width: 100%;
-    }
 }
 
 
@@ -919,6 +921,11 @@ $breakpoint-small-laptop: 991px;
         #header-main .logo { flex-grow: 0; }    
     }
 
+    .slide {
+        height: 60vh;
+        max-height: 60rem;
+    }
+
     .category { height: 30rem; }
 
     .merker-body a {
@@ -969,11 +976,16 @@ $breakpoint-small-laptop: 991px;
     }
 
     #handlekurv {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: $space-l;
 
         > :nth-child(1) {
             grid-column: 1 / -1;
+        }
+
+        > :nth-child(2) {
+            grid-column: span 2;
+            padding-right: $space-l;
         }
     }
 
