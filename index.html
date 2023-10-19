@@ -16,65 +16,63 @@
             <span>Gratis levering<img src="gfx/check.svg" alt="Checkmark" class="icon-xs"></span>
             <span>Gratis retur<img src="gfx/check.svg" alt="Checkmark" class="icon-xs"></span>
             <span>60 dagers åpent kjøp<img src="gfx/check.svg" alt="Checkmark" class="icon-xs"></span>
-            <nav>
+            <nav aria-label="secondary">
                 <ul>
                     <li>
-                        <a href="#" class="text-black"><span>favoritter</span><img src="gfx/heart.svg" alt="" class="icon-s"></a>
+                        <a href="#" class="text-black"><span>favoritter</span><img src="gfx/heart.svg" alt="Vis lagret i favoritter" class="icon-s"></a>
                     </li>
                     <li>
-                        <a href="#" class="text-black"><span class="text-black">Min profil</span><img src="gfx/profile.svg" alt="" class="icon-s"></a>
+                        <a href="#" class="text-black"><span class="text-black">Min profil</span><img src="gfx/profile.svg" alt="Gå til min profil" class="icon-s"></a>
                     </li>
                     <li>
-                        <a href="handlekurv.html" class="text-black"><span>Handlekurv</span><img src="gfx/shopping_bag.svg" alt="" class="icon-s"></a>
+                        <a href="handlekurv.html" class="text-black"><span>Handlekurv</span><img src="gfx/shopping_bag.svg" alt="Vis produkter i handlekurv" class="icon-s"></a>
                     </li>
                 </ul>
             </nav>
         </section>
         <section id="header-main">
-            <span class="logo"><a href="index.html">Firstshoes</a></span>
+            <span class="logo" role="navigation"><a href="index.html">Firstshoes</a></span>
             <span class="icon-m">
-                <a href="#"><img src="gfx/search.svg" alt="" class="icon-m"></a>
+                <a href="#"><img src="gfx/search.svg" alt="Søk etter produkter" class="icon-m"></a>
             </span>
             <span class="icon-m">
-               <a href="#"><img src="gfx/hamburger.svg" alt="" class="icon-m"></a>
+               <a href="#" aria-label="menu"><img src="gfx/hamburger.svg" alt="Åpne meny" class="icon-m"></a>
             </span>
-            <nav>
+            <nav aria-label="primary">
                 <ul>
-                    <li><a href="#" class="">Herre</a></li>
-                    <li><a href="#" class="">Dame</a></li>
-                    <li><a href="#" class="">Merker</a></li>
-                    <li><a href="#" class="">Tilbud</a></li>
+                    <li><a href="#">Herre</a></li>
+                    <li><a href="#">Dame</a></li>
+                    <li><a href="#">Merker</a></li>
+                    <li><a href="#">Tilbud</a></li>
                     <li><a href="#">Vinter</a></li>
                 </ul>
             </nav>
-            <form>
-                <label for="search"></label>
-                <input type="text" id="search" placeholder="Søk etter produkter">
+            <form role="search">
+                <input type="text" id="search-input" placeholder="Søk etter produkter">
                 <button type="submit"><img src="gfx/search.svg" alt="" class="icon-white">Søk</button>
             </form>
         </section>
     </header>
-
     <main id="main">
         <section id="slider">
             <article class="slide">
                 <h1 class="heading-1 text-white">30% på alle vintersko</h1>
                 <a href="#" class="btn-l solid-light">Se tilbud!</a>
-                <img src="img/the-alps-331.jpg" alt="" class="slide-img bg-image">
+                <img src="img/the-alps-331.jpg" alt="Header banner" class="slide-img bg-image">
             </article>
             <article class="slide">
                 <h2 class="heading-1 text-white">Høstens herrekolleksjon</h2>
                 <a href="#" class="btn-l solid-light">Se tilbud!</a>
-                <img src="img/autum_collection_man.jpg" alt="" class="slide-img bg-image">
+                <img src="img/autum_collection_man.jpg" alt="Header banner" class="slide-img bg-image">
             </article>
             <article class="slide">
                 <h2 class="heading-1 text-white">Billige sko hele året</h2>
                 <a href="#" class="btn-l solid-light">Se tilbud!</a>
-                <img src="img/cheap_shoes_year.jpg" alt="" class="slide-img bg-image">
+                <img src="img/cheap_shoes_year.jpg" alt="Header banner" class="slide-img bg-image">
             </article>
             <div class="slide-arrows">
-                <span class="slide-arrow-left icon-xs" onclick="plusDivs(-1)"><img src="gfx/left-arrow.svg" alt="" class="slide-navi-arrow"></span>
-                <span class="slide-arrow-right icon-xs" onclick="plusDivs(1)"><img src="gfx/right-arrow.svg" alt="" class="slide-navi-arrow"></span>
+                <span class="slide-arrow-left icon-xs" onclick="plusDivs(-1)" tabindex="0"><img src="gfx/left-arrow.svg" alt="Slide til venstre" class="slide-navi-arrow"></span>
+                <span class="slide-arrow-right icon-xs" onclick="plusDivs(1)" tabindex="0"><img src="gfx/right-arrow.svg" alt="Slide til høyre" class="slide-navi-arrow"></span>
             </div>
             <div class="slide-dots">
                 <span class="dot" onclick="currentDiv(1)"></span>
@@ -86,15 +84,15 @@
             <h2 class="heading-2">Hvem handler du for</h2>
             <a href="#" class="category">
                 <h3 class="text-white">Dame</h3>
-                <img src="img/karabadgak-shoes-2914977_1920.jpg" alt="" class="bg-image">
+                <img src="img/karabadgak-shoes-2914977_1920.jpg" alt="Sko for damer" class="bg-image">
             </a>
             <a href="#" class="category">
                 <h3 class="text-white">Herre</h3>
-                <img src="img/black-jiracheep-B5MKPcwjXr4-unsplash.jpg" alt="" class="bg-image">
+                <img src="img/black-jiracheep-B5MKPcwjXr4-unsplash.jpg" alt="Sko for herrer" class="bg-image">
             </a>
-            <a href="#" class="category">
+            <a href="#" class="category">s
                 <h3 class="text-white">Barn</h3>
-                <img src="img/sven-brandsma-iVAs1Y_C8qI-unsplash.jpg" alt="" class="bg-image">
+                <img src="img/sven-brandsma-iVAs1Y_C8qI-unsplash.jpg" alt="Sko for barn" class="bg-image">
             </a>
         </section>
         <section id="selling-points">
@@ -115,33 +113,33 @@
             <article class="merker-header">
                 <h2 class="heading-2">Populære merker</h2>
                 <p>Utforsk vårt utvalg av merker</p>
-                <span><img src="gfx/left-arrow.svg" alt="" class="icon-round-m bg-92"></span>
-                <span><img src="gfx/right-arrow.svg" alt="" class="icon-round-m bg-92"></span>
+                <span tabindex="0"><img src="gfx/left-arrow.svg" alt="Slide til venstre" class="icon-round-m bg-92"></span>
+                <span tabindex="0"><img src="gfx/right-arrow.svg" alt="Slide til høyre" class="icon-round-m bg-92"></span>
             </article>
             <div class="merker-body">
                 <a href="#">
                     <h3 class="text-white">Ecco</h3>
-                    <img src="img/Ecco+Shoes+Blog+1.jpg" alt="" class="bg-image">
+                    <img src="img/Ecco+Shoes+Blog+1.jpg" alt="produktbrand for Ecco" class="bg-image">
                     <p>Kjøp Ecco sko<img src="gfx/arrow-right-2.svg" alt=""></p>
                 </a>
                 <a href="#">
                     <h3 class="text-white">Nike</h3>
-                    <img src="img/feet-1840619_1920.jpg" alt="" class="bg-image">
+                    <img src="img/feet-1840619_1920.jpg" alt="produktbrand for Nike" class="bg-image">
                     <p>Kjøp Nike sko<img src="gfx/arrow-right-2.svg" alt=""></p>
                 </a>
                 <a href="#">
                     <h3 class="text-white">Skechers</h3>
-                    <img src="img/5cbe235ddaa9a96cfe352384.webp" alt="" class="bg-image">
+                    <img src="img/5cbe235ddaa9a96cfe352384.webp" alt="produktbrand for Skechers" class="bg-image">
                     <p>Kjøp Skechers sko<img src="gfx/arrow-right-2.svg" alt=""></p>
                 </a>
                 <a href="#">
                     <h3 class="text-white">Ecco</h3>
-                    <img src="img/arunas-naujokas-yzmtlz9SJ4A-unsplash.jpg" alt="" class="bg-image">
+                    <img src="img/arunas-naujokas-yzmtlz9SJ4A-unsplash.jpg" alt="produktbrand for Ecco" class="bg-image">
                     <p>Kjøp Ecco sko<img src="gfx/arrow-right-2.svg" alt=""></p>
                 </a>
                 <a href="#">
                     <h3 class="text-white">Ecco</h3>
-                    <img src="img/arunas-naujokas-yzmtlz9SJ4A-unsplash.jpg" alt="" class="bg-image">
+                    <img src="img/arunas-naujokas-yzmtlz9SJ4A-unsplash.jpg" alt="produktbrand for Ecco" class="bg-image">
                     <p>Kjøp Ecco sko<img src="gfx/arrow-right-2.svg" alt=""></p>
                 </a>
             </div>
@@ -154,8 +152,8 @@
                     <h3>Liam warm gore-tex black</h3>
                     <h4>Viking</h4>
                     <span>249kr</span>
-                    <span><img src="gfx/heart.svg" alt=""></span>
-                    <img src="img/viking-s.jpg" alt="">
+                    <span><img src="gfx/heart.svg" alt="Legg til favoritt"></span>
+                    <img src="img/viking-s.jpg" alt="produktbilde for Liam warm gore-tex black sko">
                 </a>
             </article>
             <article>
@@ -163,8 +161,8 @@
                     <h3>Shoes</h3>
                     <h4>Duffy</h4>
                     <span>249kr</span>
-                    <span><img src="gfx/heart.svg" alt=""></span>
-                    <img src="img/duffy-s.jpg" alt="">
+                    <span><img src="gfx/heart.svg" alt="Legg til favoritt"></span>
+                    <img src="img/duffy-s.jpg" alt="produktbilde for Shoes sko">
                 </a>
             </article>
             <article>
@@ -172,8 +170,8 @@
                     <h3>Shape 35 sartorelle</h3>
                     <h4>Ecco</h4>
                     <span>249kr</span>
-                    <span><img src="gfx/heart.svg" alt=""></span>
-                    <img src="img/eccho-s2.jpg" alt="">
+                    <span><img src="gfx/heart.svg" alt="Legg til favoritt"></span>
+                    <img src="img/eccho-s2.jpg" alt="produktbilde for Shape 35 sartorelle sko">
                 </a>
             </article>
             <article>
@@ -181,8 +179,8 @@
                     <h3>R-revolurion skinnsneakers</h3>
                     <h4>Rieker-evolution</h4>
                     <span>249kr</span>
-                    <span><img src="gfx/heart.svg" alt=""></span>
-                    <img src="img/rieker-evolution-s.jpg" alt="">
+                    <span><img src="gfx/heart.svg" alt="Legg til favoritt"></span>
+                    <img src="img/rieker-evolution-s.jpg" alt="produktbilde for R-revolurion skinnsneakers sko">
                 </a>
             </article>
             <article>
@@ -190,8 +188,8 @@
                     <h3>Masters crt - sneakers low top lace</h3>
                     <h4>Polo</h4>
                     <span>249kr</span>
-                    <span><img src="gfx/heart.svg" alt=""></span>
-                    <img src="img/polo-s.jpg" alt="">
+                    <span><img src="gfx/heart.svg" alt="Legg til favoritt"></span>
+                    <img src="img/polo-s.jpg" alt="produktbilde for Masters crt - sneakers low top lace sko">
                 </a>
             </article>
             <article>
@@ -199,8 +197,8 @@
                     <h3>Nautisk waterproof varmeforet</h3>
                     <h4>Leaf</h4>
                     <span>249kr</span>
-                    <span><img src="gfx/heart.svg" alt=""></span>
-                    <img src="img/leaf-s.jpg" alt="">
+                    <span><img src="gfx/heart.svg" alt="Legg til favoritt"></span>
+                    <img src="img/leaf-s.jpg" alt="produktbilde for Nautisk waterproof varmeforet sko">
                 </a>
             </article>
             <article>
@@ -208,8 +206,8 @@
                     <h3>Moss tursko gore-tex</h3>
                     <h4>Tamaris</h4> 
                     <span>249kr</span>
-                    <span><img src="gfx/heart.svg" alt=""></span>
-                    <img src="img/tamaris-s.jpg" alt="">
+                    <span><img src="gfx/heart.svg" alt="Legg til favoritt"></span>
+                    <img src="img/tamaris-s.jpg" alt="produktbilde for Moss tursko gore-tex sko">
                 </a>
             </article>
             <article>
@@ -217,8 +215,8 @@
                     <h3>Boys flex glow elite blinkesko</h3>
                     <h4>Skechers</h4>
                     <span>249kr</span>
-                    <span><img src="gfx/heart.svg" alt=""></span>
-                    <img src="img/skecher-s.jpg" alt="">
+                    <span><img src="gfx/heart.svg" alt="Legg til favoritt"></span>
+                    <img src="img/skecher-s.jpg" alt="produktbilde for Boys flex glow elite blinkesko">
                 </a>
             </article>
         </section>
@@ -227,7 +225,7 @@
                 <h2 class="heading-1 text-white">Få 15% rabatt på ditt første kjøp</h2>
                 <p class="text-white">Bli medlem av kundeklubb og få 15% rabatt på ditt første kjøp</p>
                 <a href="#" class="btn-l solid-light">Bli medlem nå!</a>
-                <img src="img/arunas-naujokas-yzmtlz9SJ4A-unsplash.jpg" alt="" class="bg-image">
+                <img src="img/dad-909510_1920.jpg" alt="" class="bg-image">
             </article>
         </section>
         <section id="ads">

@@ -38,7 +38,7 @@ $space-m: clamp(2rem, calc(2rem + ((1vw - 0.76rem) * 1.7308)), 2.9rem);
 $space-l: clamp(3rem, calc(3rem + ((1vw - 0.76rem) * 2.3077)), 4.2rem);
 
 
-//############# Utility Color #############
+//############### Utility Color ###############
 .text-white { color: $white; }
 .text-black { color: $black; }
 .bg-white { background-color: $white; }
@@ -46,7 +46,7 @@ $space-l: clamp(3rem, calc(3rem + ((1vw - 0.76rem) * 2.3077)), 4.2rem);
 .bg-92 { background-color: $shade-92; }
 
 
-//############# Utility Buttons #############
+//############### Utility Buttons ###############
 .btn-l {
     padding: 1.8rem 3.6rem;
     font-size: $text-m;
@@ -100,7 +100,7 @@ $space-l: clamp(3rem, calc(3rem + ((1vw - 0.76rem) * 2.3077)), 4.2rem);
     color: $white;
 }
 
-//############# Utility Icons #############
+//############### Utility Icons ###############
 .icon-xs { width: 1.6rem; height: 1.6rem; }
 .icon-s { width: 2.2rem; height: 2.2rem; }
 .icon-m { width: 3.4rem; }
@@ -114,7 +114,7 @@ $space-l: clamp(3rem, calc(3rem + ((1vw - 0.76rem) * 2.3077)), 4.2rem);
     width: .7rem;
 }
 
-//############# Heading/text #############
+//############### Heading/text ###############
 .heading-1 {
     font-size: $heading-l;
     font-weight: 700;
@@ -171,7 +171,7 @@ p { margin: 0; }
 }
 
 
-//############# Header styles  #############
+//############### Header styles  ###############
 .skip-link {
     position: absolute;
     top: auto;
@@ -188,89 +188,88 @@ p { margin: 0; }
 
 }
 header { 
-    background: linear-gradient(180deg, $shade-92 0%, $shade-92 41%, $white 42%, $white 100%);
+    background: linear-gradient(180deg, $shade-92 0%, $shade-92 41%, $white 42%, $white 100%); }
 
-    #header-main, #header-sub {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: $space-s $document-space;
+#header-main, #header-sub {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: $space-s $document-space;
+}
+
+#header-sub {
+    padding: 0.2rem $document-space;
+    gap: $space-m;
+
+    span {
+        gap: 1rem;
+        font-size: $text-xs;
+        font-weight: 300;
+        max-width: $document-width;
+        margin: auto;
     }
 
-    #header-sub {
-        padding: 0.2rem $document-space;
+    nav {
+        flex-grow: 1;
+        justify-content: flex-end;
+        max-width: $document-width;
+        margin: auto;
+    }
+
+    ul {
+        list-style-type: none;
         gap: $space-m;
 
-        span {
-            gap: 1rem;
-            font-size: $text-xs;
-            font-weight: 300;
-            max-width: $document-width;
-            margin: auto;
-        }
-
-        nav {
-            flex-grow: 1;
-            justify-content: flex-end;
-            max-width: $document-width;
-            margin: auto;
-        }
-
-        ul {
-            list-style-type: none;
-            gap: $space-m;
-
-            a {
-                gap: 1.5rem;
-                align-items: center;
-                font-size: $text-s;
-                text-decoration: none;
-            }
-        }
-    }
-
-    #header-main {
-        :first-child { flex-grow: 2; }
-    
-        ul {
-            flex-direction: row;
-            flex-wrap: nowrap;
-            font-size: $text-s;
-            gap: $space-m;
-            list-style-type: none;
-        }
-    
-        li a {
-            text-decoration: none;
-            color: $black;
-            transition: all .2s ease-out;
-
-            &:hover { color: $shade-43; }
-        }
-
-        [type="text"] { padding-left: 1rem; }
-    
-        form button {
-            flex-direction: row;
+        a {
+            gap: 1.5rem;
             align-items: center;
-            color: $white;
-            background-color: $shade-11;
-            border: none;
-            height: 3.9rem;
-            padding: 0 $space-s;
-            font-size: $text-m;
-            gap: .6rem;
-    
-            img {
-                height: 1.5rem;
-                height: 1.5rem;
-            }
+            font-size: $text-s;
+            text-decoration: none;
         }
-    
-        input { width: 20rem; }
-    
-        span:nth-child(3) { padding-left: 2.5rem; }
     }
+}
+
+#header-main {
+    :first-child { flex-grow: 2; }
+
+    ul {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        font-size: $text-s;
+        gap: $space-m;
+        list-style-type: none;
+    }
+
+    li a {
+        text-decoration: none;
+        color: $black;
+        transition: all .2s ease-out;
+
+        &:hover, &:focus { color: $shade-43; }
+    }
+
+    [type="text"] { padding-left: 1rem; }
+
+    form button {
+        flex-direction: row;
+        align-items: center;
+        color: $white;
+        background-color: $shade-11;
+        border: none;
+        height: 3.9rem;
+        padding: 0 $space-s;
+        font-size: $text-m;
+        gap: .6rem;
+
+        img {
+            height: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    input { width: 20rem; }
+
+    span:nth-child(3) { padding-left: 2.5rem; }
 }
 
 .logo a {
@@ -280,7 +279,7 @@ header {
     color: $shade-11;
 }
 
-//######### Slider #########
+//############### Slider ###############
 #slider { position: relative; }
 
 .slide {
@@ -335,7 +334,7 @@ header {
     .dot-active { background-color: $black; }
 }
 
-//######### Kategorier #########
+//############### Kategorier ###############
 #kategorier {
     gap: $space-m;
     max-width: $document-width;
@@ -360,10 +359,10 @@ header {
         font-weight: 600;
     }
 
-    &:hover { background-color: rgba(0,0,0,.4); }
+    &:hover, &:focus { background-color: rgba(0,0,0,.4); }
 }
 
-//######### Selling points #########
+//############### Selling points ###############
 #selling-points {
     gap: $space-l;
     background-color: $shade-97;
@@ -379,7 +378,7 @@ header {
 }
 
 
-//######### Merker #########
+//############### Merker ###############
 .merker-header {
     flex-direction: row;
     flex-wrap: wrap;
@@ -427,7 +426,7 @@ header {
     }
 }
 
-//######### Produkter #########
+//############### Produkter ###############
 #produkter { 
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     gap: $space-m;
@@ -520,7 +519,7 @@ header {
     }
 }
 
-//######### Enkeltprodukt side #########
+//############### Enkeltprodukt side ###############
 #produkt {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -531,6 +530,7 @@ header {
     list-style-type: none;
     padding-left: $document-space;
     max-width: $document-width;
+    font-size: $text-xs;
 
     li+li:before {
         padding: 8px;
@@ -737,7 +737,7 @@ header {
     span:not(:last-child) { font-size: $text-m; }
  }
 
- //########## Handlekurv ###############
+ //############### Handlekurv ###############
 
  #handlekurv {
     display: grid;
@@ -852,7 +852,7 @@ header {
 }
 
 
-//######### Footer #########
+//############### Footer ###############
 footer {     
     background-color: $shade-97;
 
@@ -923,7 +923,7 @@ footer {
     font-size: $text-xs;
 }
 
-// ######### Media quieries ######### 
+// ############### Media quieries ############### 
 
 $breakpoint-tablet: 760px;
 $breakpoint-small-laptop: 991px;
