@@ -50,17 +50,33 @@ body {
   background-color: #F7F7F7;
   color: #1C1C1C;
   border: 0.1rem solid #F7F7F7;
+  transition: 0.2s ease-out;
+}
+.solid-light:hover, .solid-light:focus {
+  background-color: #1C1C1C;
+  border-color: #1C1C1C;
+  color: #ffffff;
 }
 
 .solid-dark {
   background-color: #1C1C1C;
   color: #ffffff;
   border: 0.1rem solid #1C1C1C;
+  transition: 0.2s ease-out;
+}
+.solid-dark:hover, .solid-dark:focus {
+  background-color: #F7F7F7;
+  color: #1C1C1C;
 }
 
 .outline-dark {
   border: 0.1rem solid #1C1C1C;
   color: #1C1C1C;
+  transition: 0.2s ease-out;
+}
+.outline-dark:hover, .outline-dark:focus {
+  background-color: #1C1C1C;
+  color: #F7F7F7;
 }
 
 .outline-light {
@@ -149,8 +165,7 @@ p {
   width: 100%;
   height: 100%;
   position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   overflow: hidden;
   top: 0;
   left: 0;
@@ -302,14 +317,14 @@ header #header-main span:nth-child(3) {
 .slide-dots .dot {
   width: 1rem;
   height: 1rem;
-  border: 0.1rem solid #ffffff;
+  border: 0.1rem solid #000000;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
 }
 .slide-dots .dot-active {
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 #kategorier {
@@ -358,8 +373,7 @@ header #header-main span:nth-child(3) {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
+  column-gap: 1rem;
   margin-bottom: 1rem;
 }
 .merker-header p {
@@ -420,6 +434,10 @@ header #header-main span:nth-child(3) {
   padding-bottom: clamp(1.2rem, 1.2rem + (1vw - 0.76rem) * 1.1538, 1.8rem);
   text-decoration: none;
   color: #000000;
+  transition: 0.2s ease-out;
+}
+#produkter article a:hover, #produkter article a:focus {
+  transform: scale(1.05);
 }
 #produkter article a :not(:last-child) {
   padding: 0 clamp(1.2rem, 1.2rem + (1vw - 0.76rem) * 1.1538, 1.8rem);
@@ -447,7 +465,10 @@ header #header-main span:nth-child(3) {
 }
 #produkter img {
   width: 100%;
+  max-height: 18rem;
   order: -1;
+  object-fit: cover;
+  object-position: bottom;
 }
 #produkter span:not(:last-child) {
   font-size: clamp(1.8rem, 1.8rem + (1vw - 0.76rem) * 0.3846, 2rem);
@@ -526,9 +547,19 @@ header #header-main span:nth-child(3) {
   background-color: rgba(0, 0, 0, 0);
 }
 
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
 .prod_slide_thumb {
   display: none;
   width: 100%;
+  max-height: 15rem;
+  object-fit: cover;
+  object-position: bottom;
 }
 
 #prod_info {
@@ -566,8 +597,7 @@ header #header-main span:nth-child(3) {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  -moz-column-gap: clamp(1.2rem, 1.2rem + (1vw - 0.76rem) * 1.1538, 1.8rem);
-       column-gap: clamp(1.2rem, 1.2rem + (1vw - 0.76rem) * 1.1538, 1.8rem);
+  column-gap: clamp(1.2rem, 1.2rem + (1vw - 0.76rem) * 1.1538, 1.8rem);
 }
 #prod_info_color h2 {
   width: 100%;
@@ -590,8 +620,7 @@ header #header-main span:nth-child(3) {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  -moz-column-gap: clamp(1.2rem, 1.2rem + (1vw - 0.76rem) * 1.1538, 1.8rem);
-       column-gap: clamp(1.2rem, 1.2rem + (1vw - 0.76rem) * 1.1538, 1.8rem);
+  column-gap: clamp(1.2rem, 1.2rem + (1vw - 0.76rem) * 1.1538, 1.8rem);
 }
 #prod_info_size h3 {
   width: 100%;
@@ -720,9 +749,10 @@ header #header-main span:nth-child(3) {
   flex: 1 1 0;
   width: 100%;
   height: 100%;
+  max-height: 15rem;
   overflow: hidden;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+  object-position: bottom;
 }
 .cart_item > :nth-child(2) {
   flex: 2 1 0;
@@ -801,6 +831,10 @@ footer ul {
   list-style-type: none;
   font-size: clamp(1.8rem, 1.8rem + (1vw - 0.76rem) * 0.3846, 2rem);
   font-weight: 300;
+}
+footer li a {
+  text-decoration: none;
+  color: #000000;
 }
 footer form {
   flex-direction: row;
@@ -898,6 +932,9 @@ footer form [type=submit] {
   }
   #produkter h4 {
     font-size: clamp(1.8rem, 1.8rem + (1vw - 0.76rem) * 0.3846, 2rem);
+  }
+  #produkter img {
+    max-height: 27rem;
   }
   #produkter span:not(:last-child) {
     font-size: clamp(2rem, 2rem + (1vw - 0.76rem) * 0.9615, 2.5rem);

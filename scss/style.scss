@@ -67,17 +67,33 @@ $space-l: clamp(3rem, calc(3rem + ((1vw - 0.76rem) * 2.3077)), 4.2rem);
     background-color: $shade-97;
     color: $shade-11;
     border: .1rem solid $shade-97;
+    transition: .2s ease-out;
+    &:hover, &:focus {
+        background-color: $shade-11;
+        border-color: $shade-11;
+        color: $white;
+    }
 }
 
 .solid-dark {
     background-color: $shade-11;
     color: $white;
     border: .1rem solid $shade-11;
+    transition:  .2s ease-out;
+    &:hover, &:focus {
+        background-color: $shade-97;
+        color: $shade-11;
+    }
 }
 
 .outline-dark { 
     border: .1rem solid $shade-11;
     color: $shade-11;
+    transition:  .2s ease-out;
+    &:hover, &:focus {
+        background-color: $shade-11;
+        color: $shade-97;
+    }
 }
 .outline-light { 
     border: .1rem solid $shade-97;
@@ -310,13 +326,13 @@ header {
     .dot {
         width: 1rem;
         height: 1rem;
-        border: .1rem solid $white;
+        border: .1rem solid $black;
         background-color: rgba(0,0,0,0);
         border-radius: 50%;
         display: inline-block;
         cursor: pointer;
     }
-    .dot-active { background-color: $white; }
+    .dot-active { background-color: $black; }
 }
 
 //######### Kategorier #########
@@ -429,6 +445,10 @@ header {
         padding-bottom: $space-s;
         text-decoration: none;
         color: $black;
+        transition: .2s ease-out;
+        &:hover, &:focus {
+            transform: scale(1.05);
+        }
 
         :not(:last-child) { padding: 0 $space-s; }
 
@@ -459,7 +479,10 @@ header {
 
     img {
         width: 100%;
+        max-height: 18rem;
         order: -1;
+        object-fit: cover;
+        object-position: bottom;
     }
 
     span:not(:last-child) {
@@ -543,9 +566,19 @@ header {
     }
 }
 
+.slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
 .prod_slide_thumb {
     display: none;
     width: 100%;
+    max-height: 15rem;
+    object-fit: cover;
+    object-position: bottom;
 }
 
 #prod_info {
@@ -740,8 +773,10 @@ header {
         flex: 1 1 0;
         width: 100%;
         height: 100%;
+        max-height: 15rem;
         overflow: hidden;
         object-fit: cover;
+        object-position: bottom;
     }
 
     > :nth-child(2) { flex: 2 1 0; }
@@ -817,7 +852,6 @@ header {
 }
 
 
-
 //######### Footer #########
 footer {     
     background-color: $shade-97;
@@ -834,6 +868,11 @@ footer {
         list-style-type: none;
         font-size: $text-l;
         font-weight: 300;
+    }
+
+    li a {
+        text-decoration: none;
+        color: $black;
     }
 
     form {
@@ -933,9 +972,14 @@ $breakpoint-small-laptop: 991px;
         height: 40rem;
     }
 
-    #produkter h4 { font-size: $text-l; }
+    #produkter {
+        h4 { font-size: $text-l; }
 
-    #produkter span:not(:last-child) { font-size: $heading-xs; }
+        img { max-height: 27rem; }
+
+        span:not(:last-child) { font-size: $heading-xs; }
+    
+    }
 
     #bli-medlem article { min-height: 50rem; }
     #ads article { height: 50rem; }
